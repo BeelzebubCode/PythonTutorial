@@ -89,14 +89,18 @@
 # format_fullname = format_name("AnGELA", "YU")
 # print(format_fullname)
 ##############################################################################
-students = [
-    {"name": "Z", "house": "ggg"},
-    {"name": "B", "house": "ggg"},
-    {"name": "A", "house": "ggg"},
-]
+# students = [
+#     {"name": "Z", "house": "ggg"},
+#     {"name": "B", "house": "ggg"},
+#     {"name": "A", "house": "ggg"},
+# ]
 
-def get_name(student):
-    return student["name"]
+# def get_name(student):
+#     return student["name"]
 
-for student in sorted(students, key=get_name):
-    print(f"{student['name']} is in {student['house']}")
+# for student in sorted(students, key=get_name):
+#     print(f"{student['name']} is in {student['house']}")
+
+numbers = input("Enter number :").split()
+numbers = list(map(int, numbers))
+print(numbers)
