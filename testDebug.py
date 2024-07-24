@@ -101,6 +101,6 @@
 # for student in sorted(students, key=get_name):
 #     print(f"{student['name']} is in {student['house']}")
 
-numbers = input("Enter number :").split()
-numbers = list(map(int, numbers))
-print(numbers)
+# numbers = input("Enter number :").split()
+# numbers = list(map(int, numbers))
+# print(numbers)
