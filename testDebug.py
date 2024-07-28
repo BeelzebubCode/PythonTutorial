@@ -104,3 +104,98 @@
 # numbers = input("Enter number :").split()
 # numbers = list(map(int, numbers))
 # print(numbers)
+
+################################################################################
+import turtle
+
+# สร้างหน้าต่างและเต่า
+wn = turtle.Screen()
+wn.title("Cat Drawing")
+wn.bgcolor("white")
+
+t = turtle.Turtle()
+t.shape("turtle")
+t.speed(5)
+
+# วาดหัวแมว
+t.penup()
+t.goto(0, -50)
+t.pendown()
+t.circle(100)
+
+# วาดตาซ้าย
+t.penup()
+t.goto(-35, 35)
+t.pendown()
+t.circle(10)
+
+# วาดตาขวา
+t.penup()
+t.goto(35, 35)
+t.pendown()
+t.circle(10)
+
+# วาดจมูก
+t.penup()
+t.goto(0, 15)
+t.pendown()
+t.circle(5)
+
+# วาดปาก
+t.penup()
+t.goto(-25, 0)
+t.pendown()
+t.right(90)
+t.circle(25, 180)
+t.penup()
+t.goto(25, 0)
+t.pendown()
+t.circle(-25, 180)
+
+# วาดหูซ้าย
+t.penup()
+t.goto(-70, 75)
+t.pendown()
+t.goto(-100, 150)
+t.goto(-40, 120)
+t.goto(-70, 75)
+
+# วาดหูขวา
+t.penup()
+t.goto(70, 75)
+t.pendown()
+t.goto(100, 150)
+t.goto(40, 120)
+t.goto(70, 75)
+
+# วาดหนวดซ้าย
+t.penup()
+t.goto(-20, 10)
+t.pendown()
+t.goto(-80, 20)
+t.penup()
+t.goto(-20, 0)
+t.pendown()
+t.goto(-80, 0)
+t.penup()
+t.goto(-20, -10)
+t.pendown()
+t.goto(-80, -20)
+
+# วาดหนวดขวา
+t.penup()
+t.goto(20, 10)
+t.pendown()
+t.goto(80, 20)
+t.penup()
+t.goto(20, 0)
+t.pendown()
+t.goto(80, 0)
+t.penup()
+t.goto(20, -10)
+t.pendown()
+t.goto(80, -20)
+
+# ปิดหน้าต่างเมื่อคลิก
+wn.mainloop()
+##########################################################################
