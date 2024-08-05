@@ -5,3 +5,4 @@ try:
         print("%d x %d = %d" % (n, i, n*i))
 except ValueError:
     print("Too much input!") 
+  
