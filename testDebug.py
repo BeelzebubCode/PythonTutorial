@@ -289,26 +289,33 @@
 # memory = {0:1, 1:1}
 # print(recursive_sum(a, memory))
 
-"""
-rs(5, {0:1, 1:0})
-rs(4) + re(3)
-rs(3) + re(2) | rs(3) => rs(2) + rs(1) | 2 + 1 | 3 + 2 = 5
-rs(1) + re(0) | rs(2) = 2
-rs(1) = 1
-rs(0) = 1
 
-"""
+# input_str = input().split(';')
 
+# num = [group.split(',') for group in input_str]
+# num = list(map(lambda n : list(map(int, n)), num))
+# result = []
 
-input_str = input().split(';')
+# num.sort()
+# for i in range(len(num)):
+#     for j in range(min(num[i]), max(num[i])):
+#         result.append([j, j+1])
 
-num = [group.split(',') for group in input_str]
-num = list(map(lambda n : list(map(int, n)), num))
-result = []
+# print(result)
 
-num.sort()
-for i in range(len(num)):
-    for j in range(min(num[i]), max(num[i])):
-        result.append([j, j+1])
+# def fibo(n, a=1, b=1):
+#     if n == 0:
+#         return a
+#     if n == 1:
+#         return b
+#     return fibo(n-1, b, a+b)
 
-print(result)
+# print(fibo(5))
+
+sum = 0
+i = 1
+while i <= 7:
+    print(i)
+    sum+=i
+    i+=1
+print(sum)
