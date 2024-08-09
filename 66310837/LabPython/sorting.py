@@ -102,19 +102,38 @@
 
 
 
-data_str = input().split()
+# data_str = input().split()
 
-# def get_str(data):
-#     for char in data:
-#         if char.isalpha():
-#             return char
-#     return ""
+# # def get_str(data):
+# #     for char in data:
+# #         if char.isalpha():
+# #             return char
+# #     return ""
 
-# print(data_str)
-# print(sorted(data_str, key=get_str))
+# # print(data_str)
+# # print(sorted(data_str, key=get_str))
 
-# sorted_data = sorted(data_str, key=lambda data : [char for char in data if char.isalpha()])
+# # sorted_data = sorted(data_str, key=lambda data : [char for char in data if char.isalpha()])
+# # print(sorted_data[0], sorted_data[len(data_str)//2], sorted_data[len(data_str)-1])
+
+# sorted_data = sorted(data_str)
 # print(sorted_data[0], sorted_data[len(data_str)//2], sorted_data[len(data_str)-1])
 
-sorted_data = sorted(data_str)
-print(sorted_data[0], sorted_data[len(data_str)//2], sorted_data[len(data_str)-1])
+
+# def insertionSort(alist):
+#     for index in range(1, len(alist)):
+#         number = alist[index]
+#         position = index
+#         while position > 0 and alist[index-1] > number:
+#             alist[index] = alist[index-1]
+#             position -= 1
+        
+#         alist[position] = number
+
+# alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+# insertionSort(alist)
+# print(alist)
+######################################
+
+for i in reversed(range(1, 20, 2)):
+    print(i)
