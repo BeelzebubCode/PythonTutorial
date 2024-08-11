@@ -4,11 +4,11 @@ Big O คือ
     *ตัววัดประสิทธิภาพการทำงาน
     *วัดตามจำนวนข้อมูล n
 """
-# n = 10
-# thesum = 0
-# for i in range(1, n + 1):
-#     thesum = thesum + i
-# print(thesum)
+n = 10
+thesum = 0
+for i in range(1, n + 1):
+    thesum = thesum + i
+print(thesum)
 
 """
 * ตัวอย่าง sum of n
@@ -56,19 +56,19 @@ Big O คือ
 # Big O = O(n^2)
 # ใส่ input 2 ค่า Big O = O(2^2)
 
-# def duplicateCheck(arr):
-#     for i in range(len(arr)):
-#         a = arr[i]
-#         for j in range(i+1, len(arr)):
-#             b = arr[j]
-#             print(a, b)
-#             if(a == b):
-#                 return "duplicated"
-#     return "not duplicate"
+def duplicateCheck(arr):
+    for i in range(len(arr)):
+        a = arr[i]
+        for j in range(i+1, len(arr)):
+            b = arr[j]
+            print(a, b)
+            if(a == b):
+                return "duplicated"
+    return "not duplicate"
 
-# numArray = [1, 3, 5, 9]
-# result = duplicateCheck(numArray)
-# print(result)
+numArray = [1, 3, 5, 9]
+result = duplicateCheck(numArray)
+print(result)
 # ในฟังก์ชั้นนี้ต่อให้เราใส่ไปแค่ 2 ค่าแต่มันมีการทำงานซ้อนข้างในอีก
 # เช่น loop ซ้อน loop ทำลูปนอก เข้าลูปในทำในเสร็จออกไปวนนอกต่อ
 #----------------------------------------#

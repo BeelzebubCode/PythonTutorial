@@ -75,21 +75,21 @@
 # ให้ตัวที่เรียงลำดับแล้วอยู่ด้านหน้า เริ่มที่ 1 ตัว
 # ตัวถัดไปจะถูกใส่ในส่วนด้านหน้าให้ถูกตำแหน่ง
 
-# def insertionSort(alist):
-#     for index in range(1, len(alist)):
+def insertionSort(alist):
+    for index in range(1, len(alist)):
 
-#         currentvalue = alist[index]
-#         position = index
+        currentvalue = alist[index]
+        position = index
 
-#         while position > 0 and alist[position-1] > currentvalue:
-#             alist[position] = alist[position-1] # เลื่อนไปทางขวา
-#             position = position - 1
+        while position > 0 and alist[position-1] > currentvalue:
+            alist[position] = alist[position-1] # เลื่อนไปทางขวา
+            position = position - 1
 
-#         alist[position] = currentvalue
+        alist[position] = currentvalue
 
-# alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-# insertionSort(alist)
-# print(alist)
+alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+insertionSort(alist)
+print(alist)
 ################################################################
 
 
@@ -135,5 +135,62 @@
 # print(alist)
 ######################################
 
-for i in reversed(range(1, 20, 2)):
-    print(i)
+#####################################################################################
+# MIN_RUN = 32
+
+# def insertion_sort(array, left, right):
+#     for i in range(left + 1, right + 1):
+#         key = array[i]
+#         j = i - 1
+#         while j >= left and array[j] > key:
+#             array[j + 1] = array[j]
+#             j -= 1
+#         array[j + 1] = key
+
+# def merge(array, left, mid, right):
+#     len1, len2 = mid - left + 1, right - mid
+#     left_part, right_part = [], []
+#     for i in range(len1):
+#         left_part.append(array[left + i])
+#     for i in range(len2):
+#         right_part.append(array[mid + 1 + i])
+    
+#     i, j, k = 0, 0, left
+#     while i < len1 and j < len2:
+#         if left_part[i] <= right_part[j]:
+#             array[k] = left_part[i]
+#             i += 1
+#         else:
+#             array[k] = right_part[j]
+#             j += 1
+#         k += 1
+    
+#     while i < len1:
+#         array[k] = left_part[i]
+#         i += 1
+#         k += 1
+    
+#     while j < len2:
+#         array[k] = right_part[j]
+#         j += 1
+#         k += 1
+
+# def tim_sort(array):
+#     n = len(array)
+#     for i in range(0, n, MIN_RUN):
+#         insertion_sort(array, i, min((i + MIN_RUN - 1), (n - 1)))
+
+#     size = MIN_RUN
+#     while size < n:
+#         for left in range(0, n, 2 * size):
+#             mid = min((n - 1), (left + size - 1))
+#             right = min((left + 2 * size - 1), (n - 1))
+#             if mid < right:
+#                 merge(array, left, mid, right)
+#         size = 2 * size
+
+# # การใช้งาน Tim Sort
+# array = [5, 21, 7, 23, 19, 10, 1, 3, 8, 15, 9, 14]
+# tim_sort(array)
+# print(array)  # Output: [1, 3, 5, 7, 8, 9, 10, 14, 15, 19, 21, 23]
+#####################################################################################
