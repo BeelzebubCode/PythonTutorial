@@ -97,15 +97,26 @@ def listsum(numList):
 
 #========================================#
 # เลขฐาน
-def toStr(number, base):
-    number_16 = "0123456789ABCDEF"
-    if number < base:
-        return number_16[number]
-    else:
-        return toStr(number//base, base) + number_16[number%base]
+# def toStr(number, base):
+#     number_16 = "0123456789ABCDEF"
+#     if number < base:
+#         return number_16[number]
+#     else:
+#         return toStr(number//base, base) + number_16[number%base]
     
-number, number_base = input().split()
-number, number_base = int(number), int(number_base)
-print(toStr(number, number_base))
+# number, number_base = input().split()
+# number, number_base = int(number), int(number_base)
+# print(toStr(number, number_base))
 ################################################################
 
+def fac(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fac(n-1)
+
+print(fac(5))
+
+"""
+5 * 4 * 
+"""

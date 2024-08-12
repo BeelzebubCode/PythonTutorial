@@ -9,7 +9,7 @@ def hotPotato(namelist, num):
         for _ in range(num):
             simqueue.enqueue(simqueue.dequeue())
 
-        # print(simqueue.items)
+        print(simqueue.items)
         simqueue.dequeue()
 
     return simqueue.dequeue()

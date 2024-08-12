@@ -321,18 +321,61 @@
 # print(sum)
 
 
-def insertionSort(alist):
-    for index in range(1, len(alist)):
+# def insertionSort(alist):
+#     for index in range(1, len(alist)):
 
-        currentvalue = alist[index]
-        position = index
+#         currentvalue = alist[index]
+#         position = index
 
-        while position > 0 and alist[position-1] > currentvalue:
-            alist[position] = alist[position-1] # เลื่อนไปทางขวา
-            position = position - 1
+#         while position > 0 and alist[position-1] > currentvalue:
+#             alist[position] = alist[position-1] # เลื่อนไปทางขวา
+#             position = position - 1
 
-        alist[position] = currentvalue
+#         alist[position] = currentvalue
 
-alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-insertionSort(alist)
-print(alist)
+# alist = [50, 55, 60, 45, 12]
+# insertionSort(alist)
+# print(alist)
+
+# def fac(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return n * fac(n-1)
+
+# print(fac(5))
+# mylist = []
+# for i in reversed(range(1, 20, 2)):
+#     print(i)
+#     if i %3  == 0:
+#         mylist.append(i)
+
+# print(mylist)
+
+# data = input().split(';')
+# print(data)
+# name_list, num = data[0].split(','), int(data[1])
+# queue = []
+# for name in name_list:
+#     queue.insert(0, name)
+
+# while not queue == []:
+#     for _ in range(num-1):
+#         queue.insert(0, queue.pop())
+#     x = queue.pop()
+#     print(x)
+
+n = list(map(int, input().split()))
+is_sum = int(input())
+
+index_sum = []
+for i in range(len(n)-4):
+    sum_of_five = sum(n[i:i+5])
+    if sum_of_five == is_sum:
+        index_sum.append(i)
+
+if index_sum:
+    for i in index_sum:
+        print(i)
+else:
+    print(-1)

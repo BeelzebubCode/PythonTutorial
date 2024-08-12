@@ -23,14 +23,14 @@ print(thesum)
 #----------------------------------------#
 # Big O = 1 or O(1)
 # มี input เข้ามาแล้วออกเลย ทำครั้งเดียว
-# def evenOrOdd(num):
-#     if num % 2 == 0:
-#         print("even")
-#     else:
-#         print("odd")
+def evenOrOdd(num):
+    if num % 2 == 0:
+        print("even")
+    else:
+        print("odd")
 
-# evenOrOdd(0)
-# evenOrOdd(9999999)
+evenOrOdd(0)
+evenOrOdd(9999999)
 #----------------------------------------#
 
 
