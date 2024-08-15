@@ -365,17 +365,44 @@
 #     x = queue.pop()
 #     print(x)
 
-n = list(map(int, input().split()))
-is_sum = int(input())
+# n = list(map(int, input().split()))
+# is_sum = int(input())
 
-index_sum = []
-for i in range(len(n)-4):
-    sum_of_five = sum(n[i:i+5])
-    if sum_of_five == is_sum:
-        index_sum.append(i)
+# index_sum = []
+# for i in range(len(n)-4):
+#     sum_of_five = sum(n[i:i+5])
+#     if sum_of_five == is_sum:
+#         index_sum.append(i)
 
-if index_sum:
-    for i in index_sum:
-        print(i)
-else:
-    print(-1)
+# if index_sum:
+#     for i in index_sum:
+#         print(i)
+# else:
+#     print(-1)
+
+n = int(input())
+
+group_1 = []
+for _ in range(n):
+    number = int(input())
+    group_1.append(number)
+
+group_2 = list(map(int, input().split()))
+group_3 = []
+while True:
+    number = int(input())
+    if number == -1: break
+    group_3.append(number)
+
+all_group = [group_1, group_2, group_3]
+result = []
+for i in range(len(all_group)):
+    count = 0
+    for number in all_group[i]:
+        if count % 2 == 0:
+            result.insert(-1, number)
+        else:
+            result.insert(0, number)
+        count += 1
+
+print(result)
