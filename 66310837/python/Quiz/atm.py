@@ -17,6 +17,7 @@ bank = {}
 
 if salary % 100 != 0:
     print("The amount < 100 cannot be paid")
+    
 else:
     if salary >= 1000:
         bank["1000"] = salary//1000
@@ -27,7 +28,8 @@ else:
     if salary >= 100:
         bank["100"] = salary//100
         # print(bank)
+
     for key in bank:
-        if bank[key] > 0:
-            print(f"₿{key}={bank[key]}", end=";")
+        # if bank[key] > 0:
+        print(f"₿{key}={bank[key]}", end=";")
     
